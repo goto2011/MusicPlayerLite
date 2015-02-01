@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/music_lite_layout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    >
+    <!--第1行-->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/ctllandinfo"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="5px"
+	    >
+    	<!--第1行, 第1列-->
+	    <ImageButton
+	    	android:id="@+id/play_or_pause"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:src="@drawable/play"
+	    	android:background="#00000000"  />
+	    
+    	<!--第1行, 第2列-->
+	    <ImageButton
+	    	android:id="@+id/stop"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:src="@drawable/stop"  />
+	    
+    	<!--第1行, 第3列-->
+	    <LinearLayout
+	    	android:id="@+id/trackinfo"
+	    	android:orientation="vertical"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content">
+	    	
+	    	<TextView
+	    		android:id="@+id/tracetitle"
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="@string/trace_title"
+	    		android:textSize="25px"
+	    		android:textColor="#555fff"
+	    		android:marqueeRepeatLimit="marquee_forever"
+	    		android:singleLine="true"
+	    		android:focusable="true" />
+	    	
+	    	<LinearLayout
+	    		android:id="@+id/otherinfo"
+	    		android:orientation="horizontal"
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		>
+		    	<TextView
+		    		android:id="@+id/tracetitle"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:layout_weight="1"
+		    		android:text="@string/trace_artist" />
+		    		
+		    	<TextView
+		    		android:id="@+id/tracetitle"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:layout_weight="1"
+		    		android:text="@string/trace_special" />
+		    </LinearLayout>
+	    </LinearLayout>
+	</LinearLayout>
+	
+    <!--第2行: 状态条-->
+	<LinearLayout
+		android:id="@+id/save_status"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5px"
+		>
+		<TextView
+    		android:id="@+id/save_text_pro"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		android:text="@string/save_status_pro"
+    		/>
+		<TextView
+    		android:id="@+id/save_text"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		/>
+	</LinearLayout>
+	
+    <!--第3行-->
+	<LinearLayout
+		android:id="@+id/search"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5px"
+		>
+		<EditText
+    		android:id="@+id/search_edit"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="2"
+    		android:text="@string/search"
+    		/>
+		<TextView
+    		android:id="@+id/context_menu_tv"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="2"
+    		android:text="@string/context_menu_pro"
+    		android:padding="20px"
+    		/>
+	</LinearLayout>
+	
+    <!--第4行-->
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		>
+		<android.test.com.NeverEdit
+    		android:id="@+id/never_edit"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="2"
+    		android:textSize="35px"
+	    	android:textColor="#507D14"
+    		/>
+    	<LinearLayout
+    		android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+			<Button
+				android:id="@+id/append"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:text="@string/append"
+	    		android:background="@drawable/mybtn"
+	    		/>
+			<Button
+				android:id="@+id/clear"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:text="@string/option_menu_delete"
+	    		android:background="@drawable/mybtn"
+	    		/>
+		</LinearLayout>
+	</LinearLayout>
+	
+	<!--第5行-->
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		>
+		<Button
+			android:id="@+id/start_service"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/start_service"
+    		/>
+		<Button
+			android:id="@+id/start_dialer_lite"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/start_dialer_lite"
+    		/>
+		<Button
+			android:id="@+id/start_sms_lite"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:text="@string/start_sms_lite"
+    		/>
+	</LinearLayout>
+	
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/input_phone_number"
+	/>
+	<EditText
+		android:id="@+id/input_phone_number"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	/>
+	
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/input_SMS"
+	/>
+	<EditText
+		android:id="@+id/input_SMS_content"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="150px"
+	    android:gravity="top"
+	/>
+	
+	<Button
+		android:id="@+id/send_SMS"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+		android:text="@string/send_SMS"
+	/>
+</LinearLayout>

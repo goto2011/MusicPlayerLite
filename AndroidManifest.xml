@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="android.test.com"
+      android:versionCode="1" android:versionName="@string/welcom">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    	<!-- 主activity -->
+        <activity android:name=".MusicPlayerLite"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.example.project.SHOW_CURRENT" />
+				<action android:name="com.example.project.SHOW_RECENT" />
+				<action android:name="com.example.project.SHOW_PENDING" />
+				<category android:name="android.intent.Category.DEFAULT" />
+				<category android:name="android.intent.Category.BROWSABLE" />
+				<data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        
+        <!-- listview -->
+		<activity android:name=".ListViewShow.ListViewShow"> </activity>
+		
+		<!-- 8. 跳转到另一个 activity, begin -->
+		<!-- 注意: 每个activity都需要在 Manifest 中定义. -->
+		<!-- ServiceManager -->
+		<activity android:name=".ServiceManager"> </activity>
+		
+		<!-- Dialer Lite -->
+		<activity android:name=".DialerLite.DialerLite">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+		<!-- SMS Lite -->
+		<activity android:name=".SMSLite.SMSLite"> </activity>
+		<!-- 8. 跳转到另一个 activity, end -->
+		
+		<!-- service -->
+		<!-- android:process=":remoute" 表示该Service将运行在一个独立的进程中, 其生命周期和 activity的状态无关了. -->
+		<service android:name=".MusicPlayService" android:process=":remoute">
+		</service>
+		
+		<!-- 15. 注册 BroadcastReceiver, 并处理收到的 Broadcast, begin -->
+		<!-- 静态注册 BroadcastReceiver -->
+		<receiver android:name=".BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.DATE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		<!-- 15. 注册 BroadcastReceiver, 并处理收到的 Broadcast, end -->
+		
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+    
+    <!-- 14. 设置应用权限(uses-permission), begin -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REVEIVE_BOOT_COMPLETED" />
+    <!-- 14. 设置应用权限(uses-permission), end -->
+</manifest> 
